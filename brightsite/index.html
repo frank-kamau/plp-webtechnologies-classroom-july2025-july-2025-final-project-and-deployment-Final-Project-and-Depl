@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BrightSite — Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="BrightSite demo — multi-page responsive site with CSS animations and JavaScript interactions.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">BrightSite</a>
+
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="primaryNav">
+        ☰ <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primaryNav" class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-text animate-slide">
+          <h1>Design faster. Learn faster.</h1>
+          <p>Generate beautiful study material and product content in seconds. Built with HTML5, CSS3 and vanilla JavaScript.</p>
+          <p>
+            <a class="btn primary" href="services.html">Explore Services</a>
+            <a class="btn" href="contact.html">Contact Us</a>
+          </p>
+        </div>
+        <div class="hero-art">
+          <!-- placeholder image; replace with images/hero.jpg if you add one -->
+           <img src="images/hero.jpg" alt="Illustration of product" width="800" height="450">
+          <div class="hero-box">Interactive Demo</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="wrap features">
+      <h2>Key Features</h2>
+      <div class="grid cards">
+        <article class="card">
+          <h3>AI-Powered</h3>
+          <p>Quick AI generation integration (demo-ready).</p>
+        </article>
+
+        <article class="card">
+          <h3>Responsive</h3>
+          <p>Mobile-first layout that looks great on any device.</p>
+        </article>
+
+        <article class="card">
+          <h3>Interactive</h3>
+          <p>Accordions, toggles and form validation using vanilla JS.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- QUICK DEMO (small interactive widget) -->
+    <section class="wrap demo">
+      <h2>Mini Demo — Toggle Animation</h2>
+      <p>Click the button to toggle a CSS animation (JS adds/removes class).</p>
+      <button id="demoToggle" class="btn">Toggle Demo Animation</button>
+      <div id="demoBox" class="demo-box">I animate</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> BrightSite • Built for final assignment</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

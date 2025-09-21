@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BrightSite — Services</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">BrightSite</a>
+      <button id="menuToggleServices" class="menu-toggle" aria-expanded="false" aria-controls="primaryNavServices">☰</button>
+      <nav id="primaryNavServices" class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <h1>Services</h1>
+      <p>We offer a few service demos — the accordion below demonstrates content toggling using JavaScript (adds/removes classes).</p>
+    </section>
+
+    <section class="panel">
+      <h2>Service Details (Accordion)</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-toggle">Custom Flashcards</button>
+          <div class="acc-panel">We generate flashcards from plain text input via an AI integration.</div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-toggle">Responsive Design</button>
+          <div class="acc-panel">Mobile-first CSS, accessibility, cross-device testing included.</div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-toggle">Deployment & Hosting</button>
+          <div class="acc-panel">Guidance to deploy on GitHub Pages, Netlify, or Vercel.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="yearServices"></span> BrightSite</p>
+      <nav class="footer-nav"><a href="index.html">Home</a> · <a href="about.html">About</a></nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

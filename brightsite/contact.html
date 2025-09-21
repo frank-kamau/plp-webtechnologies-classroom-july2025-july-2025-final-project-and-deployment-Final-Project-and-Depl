@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BrightSite — Contact</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">BrightSite</a>
+      <button id="menuToggleContact" class="menu-toggle" aria-expanded="false" aria-controls="primaryNavContact">☰</button>
+      <nav id="primaryNavContact" class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <h1>Contact Us</h1>
+      <p>Use the form below to send us a message. The form is validated with custom JavaScript (no HTML5-only validation) to demonstrate JS validation skills.</p>
+    </section>
+
+    <section class="panel">
+      <form id="contactForm" novalidate>
+        <label for="fullname">Full name</label>
+        <input id="fullname" name="fullname" type="text" placeholder="Your name">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="name@example.com">
+
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" placeholder="Short subject">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Write your message here..."></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Send Message</button>
+          <button type="reset" class="btn">Reset</button>
+        </div>
+
+        <div id="formFeedback" class="form-feedback" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="yearContact"></span> BrightSite</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

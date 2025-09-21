@@ -1,0 +1,90 @@
+/* styles.css
+   Responsive layout, CSS transitions, and keyframe animations.
+   Comments indicate which part of the assignment is satisfied.
+*/
+
+/* Basic variables & reset */
+:root{
+  --bg: #f4f7fb;
+  --card: #fff;
+  --text: #0b2338;
+  --accent: #0b63ff;
+  --muted: #5b6b7a;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+.wrap{max-width:1000px;margin:0 auto;padding:1rem}
+
+/* Header & nav */
+.site-header{background:linear-gradient(180deg,#fff,#f7fbff);border-bottom:1px solid rgba(11,99,255,0.06)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.15rem}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:0.5rem;align-items:center}
+.nav a{color:var(--text);text-decoration:none;padding:0.4rem 0.6rem;border-radius:6px}
+.nav a.active{background:var(--accent);color:#fff}
+.menu-toggle{display:none;background:transparent;border:0;font-size:1.1rem;cursor:pointer}
+
+/* Hero */
+.hero{padding:2rem 0;display:grid;grid-template-columns:1fr 340px;gap:1rem;align-items:center}
+.hero-text h1{margin:0 0 .6rem 0;font-size:1.9rem}
+.hero-box{height:220px;border-radius:12px;background:linear-gradient(120deg,#fff,#eaf3ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+
+/* Cards grid */
+.grid{display:grid;gap:1rem}
+.cards{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));display:grid}
+.card{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 10px 24px rgba(11,22,40,0.03);transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(11,22,40,0.06)}
+
+/* Buttons & transitions (Part 1) */
+.btn{padding:.5rem .9rem;border-radius:8px;border:1px solid rgba(11,99,255,0.12);background:white;color:var(--accent);cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(11,99,255,0.08)}
+.btn.primary{background:var(--accent);color:#fff;border:none}
+
+/* Demo box animation triggered by JS (Part 3) */
+.demo-box{margin-top:1rem;padding:1rem;border-radius:8px;background:#fff;border:1px solid rgba(0,0,0,0.06);width:160px;text-align:center;transition:transform .4s,box-shadow .4s}
+.demo-box.animate{transform:translateY(-10px) scale(1.02);box-shadow:0 18px 38px rgba(11,22,40,0.08)}
+
+/* Banner/keyframes */
+.animate-slide{animation:slideIn .7s ease both}
+@keyframes slideIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* Accordion styles (Services page) */
+.accordion .acc-item{margin-bottom:.5rem}
+.acc-toggle{width:100%;text-align:left;padding:.6rem;border-radius:6px;border:1px solid rgba(0,0,0,0.06);background:#fff;cursor:pointer}
+.acc-panel{padding:.6rem 1rem;margin-top:.3rem;background:#fbfdff;border-radius:6px;display:none}
+.acc-item.open .acc-panel{display:block}
+
+/* Flip-card in other demos (already in separate assignment, but style included) */
+.flip-card{width:180px;height:120px;perspective:1000px;margin:1rem auto}
+.flip-inner{width:100%;height:100%;position:relative;transition:transform .6s;transform-style:preserve-3d;border-radius:8px}
+.flip-card .front,.flip-card .back{position:absolute;width:100%;height:100%;backface-visibility:hidden;display:flex;align-items:center;justify-content:center;border-radius:8px}
+.flip-card .front{background:linear-gradient(120deg,#fff,#f2f8ff)}
+.flip-card .back{background:linear-gradient(120deg,#0b63ff,#7db4ff);color:white;transform:rotateY(180deg)}
+.flip-card.flipped .flip-inner{transform:rotateY(180deg)}
+
+/* Modal (slide+fade) */
+.modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.45);display:flex;align-items:center;justify-content:center;animation:fadeIn .18s}
+.modal{background:var(--card);padding:1rem;border-radius:10px;min-width:280px;transform:translateY(12px);animation:popIn .28s both}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes popIn{from{transform:translateY(12px) scale(.98);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}
+
+/* Loader spinner */
+.loader{width:48px;height:48px;border-radius:50%;border:6px solid #e6eef9;border-top-color:var(--accent);animation:spin 1s linear infinite;margin:1rem auto}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(11,99,255,0.06);padding:1rem;margin-top:2rem;background:linear-gradient(180deg,#fff,#fbfdff)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+
+/* Small utilities */
+.panel{padding:1rem 0}
+.muted{color:var(--muted)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Responsive */
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr}
+  .nav ul{display:none}
+  .menu-toggle{display:inline-block}
+  .nav.open ul{display:flex;flex-direction:column;gap:0}
+  .header-inner{align-items:center}
+}

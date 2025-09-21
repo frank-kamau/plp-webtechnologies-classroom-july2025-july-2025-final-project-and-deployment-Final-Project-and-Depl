@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BrightSite — About</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">BrightSite</a>
+      <button id="menuToggleAbout" class="menu-toggle" aria-expanded="false" aria-controls="primaryNavAbout">☰</button>
+      <nav id="primaryNavAbout" class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <h1>About BrightSite</h1>
+      <p>We combine design and interactivity to create modern web experiences. This page demonstrates responsive layout and CSS animations.</p>
+    </section>
+
+    <section class="panel team">
+      <h2>Our Team</h2>
+      <div class="grid cards">
+        <article class="card animate-fade">
+          <img src="images/team-alice.jpg" alt="Alice, Founder" class="team-photo" width="800" height="450">
+          <h3>Alice • Founder</h3>
+          <p>Product & design.</p>
+        </article>
+        <article class="card animate-fade" style="animation-delay:0.12s">
+          <img src="images/team-ben.jpg" alt="Alice, Founder" class="team-photo" width="300" height="450">
+          <h3>Ben • Engineer</h3>
+          <p>Frontend & accessibility.</p>
+        </article>
+        <article class="card animate-fade" style="animation-delay:0.24s">
+          <img src="images/team-clara.jpg" alt="Alice, Founder" class="team-photo" width="300" height="450">
+          <h3>Clara • Growth</h3>
+          <p>Marketing & outreach.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Timeline (sample)</h2>
+      <ol class="timeline">
+        <li><strong>Month 1:</strong> Planning & prototypes</li>
+        <li><strong>Month 2:</strong> Core features & testing</li>
+        <li><strong>Month 3:</strong> Launch & feedback</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="yearAbout"></span> BrightSite</p>
+      <nav class="footer-nav"><a href="index.html">Home</a> · <a href="contact.html">Contact</a></nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
